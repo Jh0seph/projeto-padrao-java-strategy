@@ -1,17 +1,25 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import Veiculo.Veiculo;
+import VeiculoAcao.BicicletaMove;
+import VeiculoAcao.CarroMove;
+import VeiculoAcao.MotoMove;
+import VeiculoAcao.OnibusMove;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Comando do carro
+        Veiculo carro = new Veiculo(new CarroMove());
+        carro.move();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // Comando do bicicleta
+        Veiculo bicibleta = new Veiculo(new BicicletaMove());
+        bicibleta.move();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        // Comando do moto
+        Veiculo moto = new Veiculo(new MotoMove());
+        moto.move();
+
+        // Comando do onibus
+        Veiculo onibus = new Veiculo(new OnibusMove());
+        onibus.move();
     }
 }
